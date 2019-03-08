@@ -1,0 +1,64 @@
+{
+    "vizia": {
+        "connections": [
+            {
+                "name": "analytics",
+                "path": "/analytics",
+                "type": "associated with"
+            }
+        ]
+    },
+    "analytics": {
+        "connections": [
+            {
+                "name": "vizia",
+                "path": "/vizia",
+                "type": "associated with"
+            }
+        ],
+        "packages": {
+            "crawler": {
+                "connections": [
+                    {
+                        "name": "webCrawler",
+                        "path": "/analytics/packages/webCrawler",
+                        "type": "is used by"
+                    },
+                    {
+                        "name": "resourceOperationsPartial",
+                        "path": "/analytics/packages/resourceOperationsPartial",
+                        "type": "depends on"
+                    }
+                ]
+            },
+            "webCrawler": {
+                "connections": [
+                    {
+                        "name": "crawler",
+                        "path": "/analytics/packages/crawler",
+                        "type": "depends on"
+                    },
+                    {
+                        "name": "resourceOperationsPartial",
+                        "path": "/analytics/packages/resourceOperationsPartial",
+                        "type": "depends on"
+                    }
+                ]
+            },
+            "resourceOperationsPartial": {
+                "connections": [
+                    {
+                        "name": "crawler",
+                        "path": "/analytics/packages/crawler",
+                        "type": "is used by"
+                    },
+                    {
+                        "name": "webCrawler",
+                        "path": "/analytics/packages/webCrawler",
+                        "type": "is used by"
+                    }
+                ]
+            }
+        }
+    }
+}
