@@ -1,8 +1,12 @@
 # bw-psm
 ## An extensible expression of Brandwatch at Planetary, Street level and Molecular scales
 
+### Configuration and installation
+Add elements to `config/elements.json`
+
 `npm install` to install
 
+### Usage
 `sudo node server.js` to run
 
 go to [http://localhost/app](http://localhost/app) to display

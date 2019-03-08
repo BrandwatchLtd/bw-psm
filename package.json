@@ -1,21 +1,21 @@
 {
   "name": "bw-psm",
   "version": "0.0.1",
-  "description": "Brandwatch Planetary-Street level-Molecular knowledge sharing",
+  "description": "An extensible expression of Brandwatch at Planetary, Street level and Molecular scales",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesTwisleton/bw-psm.git"
+    "url": "git+https://github.com/BrandwatchLtd/bw-psm.git"
   },
   "author": "James Twisleton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JamesTwisleton/bw-psm/issues"
+    "url": "https://github.com/BrandwatchLtd/bw-psm/issues"
   },
-  "homepage": "https://github.com/JamesTwisleton/bw-psm#readme",
+  "homepage": "https://github.com/BrandwatchLtd/bw-psm#readme",
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
