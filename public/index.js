@@ -9,14 +9,11 @@ function makeDivs() {
     });
 }
 
-
-
 function parseConnections(connections) {
     return connections.reduce((memo, connection) => {
         if (!connection) {
             return memo;
         }
-
         return `
             ${memo}
             <li class="${connection.type}">${connection.name}</li>

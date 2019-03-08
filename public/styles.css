@@ -2,9 +2,6 @@
     font-family: "Roboto",Helvetica,Arial,sans-serif;
 }
 .header {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    */
     padding-bottom:5%;
 }
 .grid-container {
