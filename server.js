@@ -36,3 +36,6 @@ function sendData(brandwatchElement) {
         });
     });
 }
+
+
+/** MAKE FUNCTION TO TRAVERSE DOWN */

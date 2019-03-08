@@ -3,7 +3,9 @@ function makeDivs() {
     socket = io.connect('http://localhost');
     socket.on('init', function (data) {
         console.log(data);
-        console.log(parseElementsFromServer(data));
+        const html = parseElementsFromServer(data);
+        const htmlElement = window.document.getElementsByClassName('grid-container')[0];
+        htmlElement.innerHTML = html;
     });
 }
 
