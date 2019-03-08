@@ -28,10 +28,11 @@ function sendAllData() {
     });
 }
 
-function sendData(brandwatchComponent) {
+function sendData(brandwatchElement) {
+    toSend = elements[brandwatchElement].packages;
     io.on('connection', function (socket) {
         socket.emit('init', {
-            elements: elements[brandwatchComponent]
+            elements: toSend
         });
     });
 }

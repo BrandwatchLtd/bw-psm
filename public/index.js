@@ -1,15 +1,11 @@
 
-
-window.onload = function () {
-    /* Load elements from the server*/
+function makeDivs() {
     socket = io.connect('http://localhost');
     socket.on('init', function (data) {
         console.log(data);
-        // const elements = parseElementsFromServer(data);
-        // console.log(elements);
+        console.log(parseElementsFromServer(data));
     });
 }
-
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -29,7 +25,7 @@ function parseConnections(connections) {
 }
 
 function parseElementsFromServer(elementsFromServer) {
-    return Object.entries(elementsFromServer).map(([key, value]) => {
+    return Object.entries(elementsFromServer.elements).map(([key, value]) => {
         return `
             <h1>${key}</h1>
             <div>
