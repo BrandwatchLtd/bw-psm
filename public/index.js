@@ -9,9 +9,7 @@ function makeDivs() {
     });
 }
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
 
 function parseConnections(connections) {
     return connections.reduce((memo, connection) => {
@@ -21,19 +19,20 @@ function parseConnections(connections) {
 
         return `
             ${memo}
-            <li class="${connection.type}">${capitalizeFirstLetter(connection.name)}</li>
+            <li class="${connection.type}">${connection.name}</li>
         `
     }, '')
 }
 
 function parseElementsFromServer(elementsFromServer) {
     return Object.entries(elementsFromServer.elements).map(([key, value]) => {
-        return `
-            <h1>${key}</h1>
-            <div>
-                <h2>Connection</h2>
-                ${parseConnections(value.connections)}
-            </div>
+        return `<div class="grid-element">
+                    <h1><a href="app?element=${key}">${key}</a></h1>
+                    <div>
+                        <h2>Connections</h2>
+                        ${parseConnections(value.connections)}
+                    </div>
+                </div>
         `;
     });
 }

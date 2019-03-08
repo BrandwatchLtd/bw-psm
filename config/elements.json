@@ -1,13 +1,4 @@
 {
-    "vizia": {
-        "connections": [
-            {
-                "name": "analytics",
-                "path": "/analytics",
-                "type": "associated with"
-            }
-        ]
-    },
     "analytics": {
         "connections": [
             {
@@ -60,5 +51,23 @@
                 ]
             }
         }
+    },
+    "audiences": {
+        "connections": [
+            {
+                "name": "analytics",
+                "path": "/analytics",
+                "type": "associated with"
+            }
+        ]
+    },
+    "vizia": {
+        "connections": [
+            {
+                "name": "analytics",
+                "path": "/analytics",
+                "type": "associated with"
+            }
+        ]
     }
 }
