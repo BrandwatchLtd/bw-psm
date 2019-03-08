@@ -11,4 +11,5 @@
 - [ ] denote context IE "you are currently in: analytics"
 - [ ] connections should be links to appropriate places
 - [ ] random `,` between divs
+- [ ] extend data about modules
 - [ ] all the styling
