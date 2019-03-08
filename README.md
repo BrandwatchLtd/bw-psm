@@ -5,6 +5,8 @@
 
 `sudo node server.js` to run
 
+go to `http://localhost/app` to display
+
 ### Issues to resolve
 - [x] server sends correct scope of data to client depending on url parameters
 - [ ] leaf nodes should not cause errors when clicking title link
