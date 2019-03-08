@@ -13,19 +13,25 @@ app.get('/app', (req, res) => {
     /**
      * req.query.element is the ?element= part of the url
      */
-    sendData(req.query.element);
+    if (req.query.element === undefined) {
+        sendAllData();
+    } else {
+        sendData(req.query.element);
+    }
 });
+
+function sendAllData() {
+    io.on('connection', function (socket) {
+        socket.emit('init', {
+            elements: elements
+        });
+    });
+}
 
 function sendData(brandwatchComponent) {
     io.on('connection', function (socket) {
         socket.emit('init', {
-            /**
-             * If brandwatchComponent is empty, send whole elements object. If it's say, Vizia, just send the Vizia part of the object.
-             */
-            elements: brandwatchComponent
-        });
-        socket.on('someClientAction', function (data) {
-            some_function();
+            elements: elements[brandwatchComponent]
         });
     });
 }
