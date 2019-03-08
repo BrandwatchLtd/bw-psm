@@ -10,9 +10,6 @@ app.use(express.static(`${__dirname}/public`));
 
 app.get('/app', (req, res) => {
     res.sendFile(`${__dirname}/public/index.html`);
-    /**
-     * req.query.element is the ?element= part of the url
-     */
     if (req.query.element === undefined) {
         sendAllData();
     } else {
@@ -36,6 +33,3 @@ function sendData(brandwatchElement) {
         });
     });
 }
-
-
-/** MAKE FUNCTION TO TRAVERSE DOWN */
