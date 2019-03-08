@@ -1,5 +1,5 @@
 # bw-psm
-## An extensible expression of Brandwatch at planetary, street level and molecular scales
+## An extensible expression of Brandwatch at Planetary, Street level and Molecular scales
 
 `npm install` to install
 
